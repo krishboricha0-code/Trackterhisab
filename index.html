@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+    <meta charset="UTF-8">
+    <title>ટ્રેક્ટર હિસાબ</title>
+    <style>
+        body { text-align: center; font-family: Arial; padding: 20px; background: #fdf2e9; }
+        .box { background: white; padding: 20px; border-radius: 10px; max-width: 300px; margin: auto; }
+        input, select { width: 100%; padding: 10px; margin: 10px 0; }
+        button { background: #e65100; color: white; padding: 10px; border: none; width: 100%; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>ટ્રેક્ટર હિસાબ</h2>
+        <input type="text" id="name" placeholder="ખેડૂતનું નામ">
+        <select id="price">
+            <option value="500">રોટાવેટર - 500</option>
+            <option value="400">વાવેતર - 400</option>
+        </select>
+        <input type="number" id="vigha" placeholder="વીઘા">
+        <button onclick="calc()">ગણતરી કરો</button>
+        <h3 id="ans"></h3>
+    </div>
+    <script>
+        function calc() {
+            let p = document.getElementById('price').value;
+            let v = document.getElementById('vigha').value;
+            let n = document.getElementById('name').value;
+            document.getElementById('ans').innerHTML = n + " નો કુલ હિસાબ: ₹" + (p * v);
+        }
+    </script>
+</body>
+</html>
